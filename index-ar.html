@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="gold">
+<html lang="ar" dir="rtl" data-theme="gold">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sawari – AI-Powered Equine Health</title>
+<title>سواري – صحة الخيول المدعومة بالذكاء الاصطناعي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 [data-theme="gold"] {
   --accent:#C9A84C;--accent-light:#E8CB7A;--accent-dim:rgba(201,168,76,0.15);
@@ -372,29 +372,49 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
   .about-visual{height:220px}
   .section-title{font-size:28px}
 }
+
+/* ─── ARABIC / RTL OVERRIDES ─── */
+body{font-family:'Tajawal',sans-serif}
+h1,h2,.section-title,.hero-headline,.stat-num,.module-num,.step-num,.asi-band-val,.asi-score-val,.about-tag,.about-tag strong,.founder-avatar,.founder-quote{font-family:'Amiri',serif}
+.nav-logo,.footer-brand{font-family:'Cormorant Garamond',serif}
+em{font-style:normal}
+.founder-quote{font-style:normal}
+.founder-quote::before{font-family:'Amiri',serif;margin-right:0;margin-left:6px}
+.section-label,.nav-links a,.nav-cta,.lang-toggle,.stat-label,.module-title,.step-title,.img-overlay-label,.asi-gauge-label,.asi-band-name,.asi-score-label,.marquee-item,.footer-links a,.hero-eyebrow,.founder-role,.about-tag,.theme-btn,.btn-primary,.btn-ghost{letter-spacing:normal;text-transform:none}
+.hero-headline,.nav-logo{letter-spacing:normal}
+.theme-switcher{right:auto;left:calc(5vw + 175px)}
+.hero-visual{right:auto;left:0}
+.hero-stats{left:auto;right:5vw}
+.stat-item{text-align:right}
+.module-num{right:auto;left:28px}
+.module-card::before{transform-origin:right}
+.founder-flag{right:auto;left:32px}
+.cta-input{border-right:1px solid var(--accent-border);border-left:none}
+@media(max-width:900px){.theme-switcher{left:50%;right:auto;transform:translateX(-50%)}.hero-stats{right:auto}}
+@media(max-width:600px){.theme-switcher{left:50%;right:auto;transform:translateX(-50%)}}
 </style>
 </head>
 <body>
 
 <div class="theme-switcher">
-  <button class="theme-btn active" id="btnGold" onclick="setTheme('gold')"><span class="swatch swatch-gold"></span>Heritage</button>
-  <button class="theme-btn" id="btnBlue" onclick="setTheme('blue')"><span class="swatch swatch-blue"></span>Azure</button>
+  <button class="theme-btn active" id="btnGold" onclick="setTheme('gold')"><span class="swatch swatch-gold"></span>التراث</button>
+  <button class="theme-btn" id="btnBlue" onclick="setTheme('blue')"><span class="swatch swatch-blue"></span>أزرق</button>
 </div>
 
 <nav>
   <div style="display:flex;align-items:center;gap:14px">
     <div style="display:flex;flex-direction:column;line-height:1">
       <a href="#" class="nav-logo">SAWARI<span>.ai</span></a>
-      <span style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-subtle);margin-top:3px">Patent No — P2026-01943</span>
+      <span style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-subtle);margin-top:3px">رقم البراءة — P2026-01943</span>
     </div>
-    <a href="index-ar.html" class="lang-toggle">العربية</a>
+    <a href="index.html" class="lang-toggle">English</a>
   </div>
   <div class="nav-links" id="navLinks">
-    <a href="#about" onclick="closeMenu()">About</a><a href="#platform" onclick="closeMenu()">Platform</a>
-    <a href="#asi" onclick="closeMenu()">ASI</a><a href="#how" onclick="closeMenu()">How It Works</a><a href="#founders" onclick="closeMenu()">Founders</a>
+    <a href="#about" onclick="closeMenu()">عن سواري</a><a href="#platform" onclick="closeMenu()">المنصة</a>
+    <a href="#asi" onclick="closeMenu()">ASI</a><a href="#how" onclick="closeMenu()">كيف يعمل</a><a href="#founders" onclick="closeMenu()">المؤسسون</a>
   </div>
   <div style="display:flex;align-items:center;gap:12px">
-    <a href="#cta" class="nav-cta">Early Access</a>
+    <a href="#cta" class="nav-cta">الوصول المبكر</a>
     <button id="menuBtn" onclick="toggleMenu()" aria-label="Menu" style="display:none;background:transparent;border:1px solid var(--accent-border);color:var(--accent);padding:8px 10px;cursor:pointer;line-height:1">
       <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
         <line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/>
@@ -425,7 +445,7 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
     <!-- Base horse photo — galloping Arabian, dark toned -->
     <img
       src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=1200&q=85&fit=crop&crop=right"
-      alt="Galloping horse movement analysis"
+      alt="تحليل حركة حصان يركض"
       style="position:absolute;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:60% bottom;
              filter:saturate(0.5) brightness(0.45) contrast(1.1);
              -webkit-mask-image:linear-gradient(to right,transparent 0%,black 30%,black 80%,transparent 100%);
@@ -436,14 +456,14 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
   </div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">Equine Intelligence Platform</div>
-    <h1 class="hero-headline">Where Heritage<br>Meets <em>Intelligent</em><br>Care</h1>
-    <p class="hero-sub">Sawari brings AI-powered multi-domain monitoring to equine care — combining the UAE's rich horse heritage with cutting-edge computer vision to understand movement, track change over time, and support better decisions.</p>
+    <div class="hero-eyebrow">منصة ذكاء الخيول</div>
+    <h1 class="hero-headline">حيث يلتقي التراث<br>بالرعاية <em>الذكية</em></h1>
+    <p class="hero-sub">تقدّم سواري مراقبةً متعددة المجالات مدعومة بالذكاء الاصطناعي لرعاية الخيول — تجمع بين تراث الإمارات العريق في الخيول وأحدث تقنيات الرؤية الحاسوبية لفهم الحركة، وتتبّع التغيّر عبر الزمن، ودعم قراراتٍ أفضل.</p>
   </div>
   <div class="hero-stats">
-    <div class="stat-item"><div class="stat-num">Multiple</div><div class="stat-label">Analytical Modules</div></div>
-    <div class="stat-item"><div class="stat-num">ASI</div><div class="stat-label">Unified Signal Index</div></div>
-    <div class="stat-item"><div class="stat-num">UAE</div><div class="stat-label">Born & Built</div></div>
+    <div class="stat-item"><div class="stat-num">متعددة</div><div class="stat-label">وحدات تحليلية</div></div>
+    <div class="stat-item"><div class="stat-num">ASI</div><div class="stat-label">مؤشر الإشارة الموحّد</div></div>
+    <div class="stat-item"><div class="stat-num">الإمارات</div><div class="stat-label">وُلدت وبُنيت</div></div>
   </div>
 </section>
 
@@ -465,29 +485,29 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
           <!-- Real Arabian horse photo -->
           <img
             src="about-heritage.png"
-            alt="Emirati riders on Arabian horses in the UAE desert"
+            alt="فرسان إماراتيون على خيول عربية في صحراء الإمارات"
             style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.62) saturate(0.75) contrast(1.08);transition:filter .4s"
           />
           <!-- Accent color overlay tint -->
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim) 0%,transparent 60%,rgba(0,0,0,0.3) 100%);pointer-events:none"></div>
         </div>
       </div>
-      <div class="about-tag"><strong>2024</strong>Founded in the UAE</div>
+      <div class="about-tag"><strong>2024</strong>تأسست في الإمارات</div>
     </div>
     <div class="reveal">
-      <div class="section-label">About Sawari</div>
-      <h2 class="section-title">UAE Heritage,<br><em>Global Vision</em></h2>
-      <p class="section-body" style="margin-bottom:28px">Sawari is a UAE-based equine intelligence company developing AI-powered systems that transform visual data into objective, longitudinal insights.</p>
-      <p class="section-body">Our platform supports horse owners, trainers, breeders, and organizations through movement analysis, conformation assessment, and performance intelligence.</p>
+      <div class="section-label">عن سواري</div>
+      <h2 class="section-title">تراثٌ إماراتي،<br><em>رؤيةٌ عالمية</em></h2>
+      <p class="section-body" style="margin-bottom:28px">سواري شركةٌ إماراتية متخصّصة في ذكاء الخيول، تطوّر أنظمةً مدعومة بالذكاء الاصطناعي تحوّل البيانات المرئية إلى رؤًى موضوعية وممتدة عبر الزمن.</p>
+      <p class="section-body">تدعم منصّتنا مُلّاك الخيول والمدرّبين والمربّين والمؤسسات من خلال تحليل الحركة، وتقييم البنية، وذكاء الأداء.</p>
       <div style="margin-top:44px;display:flex;gap:36px">
         <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent)">AI-First</div>
-          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);margin-top:4px">Architecture</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent)">ذكاء أولاً</div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);margin-top:4px">البنية</div>
         </div>
         <div style="width:1px;background:var(--accent-border)"></div>
         <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent)">Real-World</div>
-          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);margin-top:4px">No Sensors Required</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--accent)">من الواقع</div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);margin-top:4px">لا حاجة لأجهزة استشعار</div>
         </div>
       </div>
     </div>
@@ -498,38 +518,38 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
 <section id="platform">
   <div class="platform-header reveal">
     <div>
-      <div class="section-label">What Sawari Does?</div>
-      <h2 class="section-title">Three Domains of<br><em>Intelligence</em></h2>
+      <div class="section-label">ماذا تفعل سواري؟</div>
+      <h2 class="section-title">ثلاثة مجالات<br><em>للذكاء</em></h2>
     </div>
-    <p class="section-body">Sawari's analytical engine spans three interconnected domains — each a specialist module feeding into a unified signal framework for comprehensive animal understanding.</p>
+    <p class="section-body">يمتد محرّك سواري التحليلي عبر ثلاثة مجالات مترابطة — كلٌّ منها وحدةٌ متخصّصة تغذّي إطار إشارةٍ موحّداً لفهمٍ شاملٍ للحيوان.</p>
   </div>
   <div class="modules-grid">
-    <div class="module-card reveal"><span class="module-num">01</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8C18 8 14 14 14 20C14 28 20 34 24 38C28 34 34 28 34 20C34 14 30 8 24 8Z"/><circle cx="24" cy="20" r="5"/><path d="M18 44L20 38M30 44L28 38"/></svg><div class="module-title">Movement Analysis</div><p class="module-desc">Quantifies gait patterns, stride symmetry, rhythm, and movement quality using computer vision — no wearables needed.</p></div>
-    <div class="module-card reveal" style="transition-delay:.08s"><span class="module-num">02</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="32" height="28" rx="2"/><line x1="16" y1="10" x2="16" y2="38"/><line x1="32" y1="10" x2="32" y2="38"/><line x1="8" y1="20" x2="40" y2="20"/><line x1="8" y1="30" x2="40" y2="30"/></svg><div class="module-title">Conformation Analysis</div><p class="module-desc">Extracts structural alignment indicators, evaluating skeletal proportions and conformation quality from visual input.</p></div>
-    <div class="module-card reveal" style="transition-delay:.16s"><span class="module-num">03</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8L28 18L40 18L30 25L34 36L24 29L14 36L18 25L8 18L20 18Z"/></svg><div class="module-title">Performance Monitoring</div><p class="module-desc">Tracks competition and training performance across racing, endurance, dressage, and jumping disciplines with longitudinal context.</p></div>
+    <div class="module-card reveal"><span class="module-num">01</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8C18 8 14 14 14 20C14 28 20 34 24 38C28 34 34 28 34 20C34 14 30 8 24 8Z"/><circle cx="24" cy="20" r="5"/><path d="M18 44L20 38M30 44L28 38"/></svg><div class="module-title">تحليل الحركة</div><p class="module-desc">يقيس أنماط المشية وتناظر الخطوة والإيقاع وجودة الحركة باستخدام الرؤية الحاسوبية — دون الحاجة لأجهزةٍ قابلة للارتداء.</p></div>
+    <div class="module-card reveal" style="transition-delay:.08s"><span class="module-num">02</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="32" height="28" rx="2"/><line x1="16" y1="10" x2="16" y2="38"/><line x1="32" y1="10" x2="32" y2="38"/><line x1="8" y1="20" x2="40" y2="20"/><line x1="8" y1="30" x2="40" y2="30"/></svg><div class="module-title">تحليل البنية</div><p class="module-desc">يستخلص مؤشرات الاصطفاف الهيكلي، ويقيّم النسب العظمية وجودة البنية من المُدخل المرئي.</p></div>
+    <div class="module-card reveal" style="transition-delay:.16s"><span class="module-num">03</span><svg class="module-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8L28 18L40 18L30 25L34 36L24 29L14 36L18 25L8 18L20 18Z"/></svg><div class="module-title">مراقبة الأداء</div><p class="module-desc">تتابع أداء المنافسات والتدريب عبر سباقات السرعة والقدرة والترويض والقفز مع سياقٍ ممتد عبر الزمن.</p></div>
   </div>
 </section>
 
 <!-- HOW -->
 <section id="how">
   <div class="how-header reveal">
-    <div class="section-label">Process</div>
-    <h2 class="section-title">From Video to <em>Insight</em></h2>
+    <div class="section-label">العملية</div>
+    <h2 class="section-title">من الفيديو إلى <em>الرؤية</em></h2>
   </div>
   <div class="steps-flow">
-    <div class="step-card reveal"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">01</div></div></div><div class="step-title">Capture</div><p class="step-desc">Record your horse using a standard smartphone camera. Sawari's guided capture system validates angle, distance, and lighting in real time.</p></div>
-    <div class="step-card reveal" style="transition-delay:.12s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">02</div></div></div><div class="step-title">Analyze</div><p class="step-desc">Multiple analytical modules simultaneously process the data — extracting movement, conformation, behavior, and other domain-specific signals.</p></div>
-    <div class="step-card reveal" style="transition-delay:.24s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">03</div></div></div><div class="step-title">Normalize</div><p class="step-desc">Sawari's ASI engine translates multiple analytical outputs into a unified intelligence layer, weighted by data quality and confidence.</p></div>
-    <div class="step-card reveal" style="transition-delay:.36s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">04</div></div></div><div class="step-title">Interpret</div><p class="step-desc">Results map to performance bands and compare against your horse's baseline history, surfacing trends and deviations over time.</p></div>
+    <div class="step-card reveal"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">01</div></div></div><div class="step-title">التصوير</div><p class="step-desc">صوّر حصانك بكاميرا هاتفٍ عادية. يتحقّق نظام التصوير الموجَّه من سواري من الزاوية والمسافة والإضاءة لحظياً.</p></div>
+    <div class="step-card reveal" style="transition-delay:.12s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">02</div></div></div><div class="step-title">التحليل</div><p class="step-desc">تعالج وحداتٌ تحليلية متعددة البيانات في آنٍ واحد — مستخلصةً إشارات الحركة والبنية والسلوك وغيرها من الإشارات المتخصّصة.</p></div>
+    <div class="step-card reveal" style="transition-delay:.24s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">03</div></div></div><div class="step-title">التوحيد</div><p class="step-desc">يحوّل محرّك ASI من سواري المخرجات التحليلية المتعددة إلى طبقة ذكاءٍ موحّدة، مرجّحةً بجودة البيانات ومستوى الثقة.</p></div>
+    <div class="step-card reveal" style="transition-delay:.36s"><div class="step-ring"><svg viewBox="0 0 128 128" fill="none"><circle cx="64" cy="64" r="50" stroke="var(--accent-border)" stroke-width="8"/><circle cx="64" cy="64" r="50" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="314" stroke-dashoffset="314" class="step-arc"/></svg><div class="step-ring-inner"><div class="step-num">04</div></div></div><div class="step-title">التفسير</div><p class="step-desc">تُسقَط النتائج على نطاقات أداء وتُقارن بالسجل المرجعي لحصانك، لتُظهر الاتجاهات والانحرافات عبر الزمن.</p></div>
   </div>
 </section>
 
 <!-- AI IMAGERY -->
 <section id="ai-imagery">
   <div class="imagery-header reveal">
-    <div class="section-label">Why Sawari?</div>
-    <h2 class="section-title"><em>Objective</em> Analysis Beyond Subjective Observation</h2>
-    <p class="section-body" style="max-width:640px;margin:0 auto">The trained eye is invaluable — but it tires, it disagrees from one expert to the next, and it can't recall exactly how a horse moved last month. Sawari turns everyday video into consistent, measurable data, so every assessment is repeatable, comparable over time, and grounded in evidence rather than impression.</p>
+    <div class="section-label">لماذا سواري؟</div>
+    <h2 class="section-title"><em>تحليلٌ موضوعي</em> يتجاوز الملاحظة الذاتية</h2>
+    <p class="section-body" style="max-width:640px;margin:0 auto">العين المدرّبة لا تُقدَّر بثمن — لكنها تتعب، وتختلف من خبيرٍ لآخر، ولا تتذكّر بدقّة كيف تحرّك الحصان الشهر الماضي. تحوّل سواري الفيديو اليومي إلى بياناتٍ متّسقة وقابلة للقياس، فيغدو كل تقييمٍ قابلاً للتكرار والمقارنة عبر الزمن، وقائماً على الدليل لا الانطباع.</p>
   </div>
   <div class="imagery-grid reveal">
     <!-- Panel 1: Movement Analysis — looping pose-estimation clips -->
@@ -541,19 +561,19 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
       <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);pointer-events:none"></div>
       <!-- Bottom gradient -->
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,0.65) 100%);pointer-events:none"></div>
-      <div class="img-panel-overlay"><div class="img-overlay-label">Movement Analysis</div><div class="img-overlay-desc">Joint tracking, gait & symmetry scoring</div></div>
+      <div class="img-panel-overlay"><div class="img-overlay-label">تحليل الحركة</div><div class="img-overlay-desc">تتبّع المفاصل وتقييم المشية والتناظر</div></div>
     </div>
 
     <!-- Panel 2: Conformation Analysis — pose-estimation stills -->
     <div class="img-panel media-rotator" style="aspect-ratio:16/9;position:relative;overflow:hidden">
-      <img class="rot-item active" src="conf-1.jpg" alt="AI Conformation Analysis" style="object-position:center"/>
-      <img class="rot-item" src="conf-2.jpg" alt="AI Conformation Analysis" style="object-position:center"/>
-      <img class="rot-item" src="conf-3.jpg" alt="AI Conformation Analysis" style="object-position:center"/>
+      <img class="rot-item active" src="conf-1.jpg" alt="تحليل البنية بالذكاء الاصطناعي" style="object-position:center"/>
+      <img class="rot-item" src="conf-2.jpg" alt="تحليل البنية بالذكاء الاصطناعي" style="object-position:center"/>
+      <img class="rot-item" src="conf-3.jpg" alt="تحليل البنية بالذكاء الاصطناعي" style="object-position:center"/>
       <!-- Darkening overlay -->
       <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);pointer-events:none"></div>
       <!-- Bottom gradient -->
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,0.65) 100%);pointer-events:none"></div>
-      <div class="img-panel-overlay"><div class="img-overlay-label">Conformation Analysis</div><div class="img-overlay-desc">Structural alignment & skeletal mapping</div></div>
+      <div class="img-panel-overlay"><div class="img-overlay-label">تحليل البنية</div><div class="img-overlay-desc">الاصطفاف الهيكلي ورسم خريطة العظام</div></div>
     </div>
 
   </div>
@@ -564,13 +584,13 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
 <section id="asi">
   <div class="asi-grid">
     <div class="reveal">
-      <div class="section-label">Animal Signal Index</div>
-      <h2 class="section-title">One Horse. One Score.<br><em>One History.</em></h2>
-      <p class="section-body" style="margin-bottom:40px">Every horse gets a single, easy-to-read score that brings all of Sawari's analysis together in one place — and builds a clear picture of how that horse is doing over time.</p>
+      <div class="section-label">مؤشر إشارة الحيوان · ASI</div>
+      <h2 class="section-title">حصانٌ واحد. درجةٌ واحدة.<br><em>سجلٌّ واحد.</em></h2>
+      <p class="section-body" style="margin-bottom:40px">يحصل كل حصانٍ على درجةٍ واحدة سهلة القراءة تجمع كل تحليلات سواري في مكانٍ واحد — وترسم صورةً واضحة لحالته عبر الزمن.</p>
       <div class="asi-features">
-        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">One Number, the Whole Picture</div><p class="asi-feature-desc">Movement, conformation, and performance combine into one score you can actually act on — no spreadsheets, no guesswork.</p></div></div>
-        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">Only as Reliable as the Data</div><p class="asi-feature-desc">Sawari weighs how good each capture is, so a windy day or an awkward angle never skews the result.</p></div></div>
-        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">See Where Things Stand at a Glance</div><p class="asi-feature-desc">Each score sits in a clear band — from optimal to needs attention — so you know what matters without decoding the AI.</p></div></div>
+        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">رقمٌ واحد، والصورة كاملة</div><p class="asi-feature-desc">تتكامل الحركة والبنية والأداء في درجةٍ واحدة يمكنك التصرّف بناءً عليها فعلاً — دون جداول بياناتٍ ولا تخمين.</p></div></div>
+        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">موثوقيةٌ بقدر البيانات</div><p class="asi-feature-desc">تقيّم سواري جودة كل تصوير، فلا يؤثّر يومٌ عاصف أو زاويةٌ غير موفّقة في النتيجة.</p></div></div>
+        <div class="asi-feature"><div class="asi-feature-dot"></div><div><div class="asi-feature-title">اعرف الوضع بنظرةٍ واحدة</div><p class="asi-feature-desc">تقع كل درجة ضمن نطاقٍ واضح — من المثالي إلى ما يحتاج انتباهاً — فتعرف ما يهم دون فكّ شيفرة الذكاء الاصطناعي.</p></div></div>
       </div>
     </div>
   </div>
@@ -580,24 +600,24 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
 <!-- FOUNDERS -->
 <section id="founders">
   <div class="founders-header reveal">
-    <div class="section-label">Founders</div>
-    <h2 class="section-title">Built by<br><em>Believers</em></h2>
-    <p class="section-body">Two Emirati co-founders united by a shared conviction: that the horse's role in UAE culture deserves world-class technological stewardship.</p>
+    <div class="section-label">المؤسسون</div>
+    <h2 class="section-title">بناه<br><em>المؤمنون به</em></h2>
+    <p class="section-body">مؤسِّسان إماراتيان يجمعهما إيمانٌ مشترك: أنّ مكانة الخيل في الثقافة الإماراتية تستحق رعايةً تقنية بمستوى عالمي.</p>
   </div>
   <div class="founders-grid">
     <div class="founder-card reveal">
       <svg class="founder-flag" viewBox="0 0 28 18" width="28" height="18" aria-label="UAE" role="img" style="border-radius:2px"><rect width="28" height="18" fill="#fff"/><rect x="7" width="21" height="6" fill="#00843D"/><rect x="7" y="6" width="21" height="6" fill="#fff"/><rect x="7" y="12" width="21" height="6" fill="#000"/><rect width="7" height="18" fill="#EF3340"/></svg>
-      <div class="founder-avatar">RA</div>
-      <div class="founder-name">Reem Alhosani</div>
-      <div class="founder-role">Co-Founder & CEO</div>
-      <div class="founder-quote">Horses communicate through movement. Our mission is to build systems capable of understanding it at scale.</div>
+      <div class="founder-avatar">ر.ح</div>
+      <div class="founder-name">ريم الحوسني</div>
+      <div class="founder-role">شريكة مؤسِّسة والرئيسة التنفيذية</div>
+      <div class="founder-quote">الخيول تتواصل عبر الحركة، ومهمّتنا بناء أنظمة قادرة على فهم هذه الحركة على نطاقٍ واسع.</div>
     </div>
     <div class="founder-card reveal" style="transition-delay:.12s">
       <svg class="founder-flag" viewBox="0 0 28 18" width="28" height="18" aria-label="UAE" role="img" style="border-radius:2px"><rect width="28" height="18" fill="#fff"/><rect x="7" width="21" height="6" fill="#00843D"/><rect x="7" y="6" width="21" height="6" fill="#fff"/><rect x="7" y="12" width="21" height="6" fill="#000"/><rect width="7" height="18" fill="#EF3340"/></svg>
-      <div class="founder-avatar">OA</div>
-      <div class="founder-name">Omran Alshamsi</div>
-      <div class="founder-role">Co-Founder & CTO</div>
-      <div class="founder-quote">The future of equine intelligence lies in combining generations of equestrian knowledge with advanced AI systems.</div>
+      <div class="founder-avatar">ع.ش</div>
+      <div class="founder-name">عمران الشامسي</div>
+      <div class="founder-role">شريك مؤسِّس والرئيس التقني</div>
+      <div class="founder-quote">مستقبل ذكاء الخيول يكمن في دمج أجيالٍ من المعرفة الفروسية مع أنظمة الذكاء الاصطناعي المتقدّمة.</div>
     </div>
   </div>
 </section>
@@ -606,22 +626,22 @@ footer{border-top:1px solid var(--accent-border);padding:48px 5vw 40px;display:f
 <section id="cta">
   <div style="position:relative;z-index:1">
     <div class="gold-divider"></div>
-    <div class="section-label reveal" style="justify-content:center">Join the Future</div>
-    <h2 class="section-title reveal" style="font-size:clamp(40px,5vw,68px);max-width:700px;margin:0 auto 24px;text-align:center">Understand Movement.<br>Monitor Change.<br><em>Support Better Decisions.</em></h2>
-    <p class="section-body reveal" style="text-align:center;max-width:480px;margin:0 auto 48px">Be among the first professionals and breeders to experience Sawari's platform. Request early access and we'll be in touch.</p>
+    <div class="section-label reveal" style="justify-content:center">انضمّ إلى المستقبل</div>
+    <h2 class="section-title reveal" style="font-size:clamp(40px,5vw,68px);max-width:700px;margin:0 auto 24px;text-align:center">افهم الحركة.<br>راقب التغيّر.<br><em>ادعم قراراتٍ أفضل.</em></h2>
+    <p class="section-body reveal" style="text-align:center;max-width:480px;margin:0 auto 48px">كن من أوائل المختصّين والمربّين الذين يجرّبون منصّة سواري. اطلب الوصول المبكر وسنتواصل معك.</p>
     <div class="cta-form reveal">
-      <input type="email" class="cta-input" placeholder="your@email.com">
-      <a href="#" class="btn-primary" style="white-space:nowrap">Request Access</a>
+      <input type="email" class="cta-input" placeholder="أدخل بريدك الإلكتروني">
+      <a href="#" class="btn-primary" style="white-space:nowrap">اطلب الوصول</a>
     </div>
-    <p style="font-size:12px;color:var(--text-subtle);margin-top:18px;text-align:center" class="reveal">For professionals, breeders, and veterinary partners · UAE & Global</p>
+    <p style="font-size:12px;color:var(--text-subtle);margin-top:18px;text-align:center" class="reveal">للمختصّين والمربّين والشركاء البيطريين · الإمارات والعالم</p>
   </div>
 </section>
 
 <footer>
   <div class="footer-brand">SAWARI<span>.ai</span></div>
-  <div class="footer-links"><a href="#about">About</a><a href="#platform">Platform</a><a href="#founders">Team</a><a href="https://sawari.ai">Website</a></div>
-  <div class="footer-copy">© 2025 Sawari Technologies. UAE. · Patent No — P2026-01943</div>
-  <div class="footer-disclaimer">Sawari provides AI-assisted analytical insights and is not intended to replace veterinary diagnosis or clinical evaluation.</div>
+  <div class="footer-links"><a href="#about">عن سواري</a><a href="#platform">المنصة</a><a href="#founders">الفريق</a><a href="https://sawari.ai">الموقع</a></div>
+  <div class="footer-copy">© 2025 سواري تكنولوجيز. الإمارات. · رقم البراءة — P2026-01943</div>
+  <div class="footer-disclaimer">تقدّم سواري رؤًى تحليلية مدعومة بالذكاء الاصطناعي، وهي ليست بديلاً عن التشخيص البيطري أو التقييم السريري.</div>
 </footer>
 
 <script>
@@ -660,13 +680,8 @@ document.querySelectorAll('.media-rotator').forEach(rotator=>{
   },4500);
 });
 
-const marqueeItems=['Movement Analysis','ASI — Animal Signal Index','Conformation Evaluation','Performance Monitoring','Longitudinal Tracking','No Sensors Required','UAE Equine Heritage'];
+const marqueeItems=['تحليل الحركة','ASI — مؤشر إشارة الحيوان','تقييم البنية','مراقبة الأداء','التتبّع طويل المدى','بدون أجهزة استشعار','تراث الخيول الإماراتي'];
 function buildMarquee(id){const el=document.getElementById(id);if(!el)return;marqueeItems.forEach(item=>{const div=document.createElement('div');div.className='marquee-item';div.innerHTML=`<span class="marquee-dot"></span>${item}`;el.appendChild(div);})}
 buildMarquee('marqueeInner');buildMarquee('marqueeClone');
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const arcObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.querySelectorAll('.step-arc').forEach((arc,i)=>{setTimeout(()=>{arc.style.transition=`stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1) ${i*.15}s`;arc.style.strokeDashoffset='0';},i*120);})}});},{threshold:.1});
-document.querySelectorAll('#how').forEach(el=>arcObserver.observe(el));
-</script>
-</body>
-</html>
+document.querySelecto
